@@ -69,7 +69,7 @@ Go to [sqliteonline.com](https://sqliteonline.com) in your browser. No account o
 1. Download `demo_queries.sql` and open it in any text editor (Notepad, VS Code, Notepad++)
 2. Copy a query from the file
 3. Paste it into the editor (the large text area in the middle of the screen)
-4. Click **▶ Run** in the top bar, or press `Ctrl + Enter`
+4. Click **▶ Run** in the top bar, or press `Shift + Enter`
 5. Results will appear in the panel below the editor
 
 > **Tip:** You can run one query at a time by selecting just that block of text before clicking Run.
@@ -80,10 +80,7 @@ Go to [sqliteonline.com](https://sqliteonline.com) in your browser. No account o
 
 **Rachell Batucan**
 Senior Data Scientist, Trella Health LLC
-BS Statistics 2015, Visayas State University (Magna Cum Laude)
+BS Statistics 2015, Visayas State University
 
----
 
-## 📄 License
 
-MIT — feel free to use and adapt for your own teaching.
