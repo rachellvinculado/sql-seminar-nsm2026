@@ -10,7 +10,7 @@ Materials for the SQL seminar delivered at **Visayas State University** for the 
 
 | File | Description |
 |------|-------------|
-| `SQL_Seminar_Deck_FINAL.pptx` | Full 45-slide presentation deck |
+| `SQL_Seminar_Deck_102026.pptx` | Full 45-slide presentation deck |
 | `tourism_ph.db` | SQLite database — 15 destinations, 100 tourists, 1,110 visits |
 | `demo_queries.sql` | Live demo queries organized by section (A–G) |
 
