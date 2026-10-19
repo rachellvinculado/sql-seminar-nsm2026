@@ -10,7 +10,7 @@ Materials for the SQL seminar delivered at **Visayas State University** for the 
 
 | File | Description |
 |------|-------------|
-| `SQL_Seminar_Deck_102026.pptx` | Full 45-slide presentation deck |
+| `SQL_Seminar_Deck_102026.pptx` | Full 34-slide presentation deck |
 | `tourism_ph.db` | SQLite database — 15 destinations, 100 tourists, 1,110 visits |
 | `demo_queries.sql` | Live demo queries organized by section (A–G) |
 
@@ -37,10 +37,10 @@ Materials for the SQL seminar delivered at **Visayas State University** for the 
 | Section | Topic |
 |---------|-------|
 | A | Getting to Know the Data |
-| B | Who is Visiting? |
-| C | Where Are They Going? |
+| B | How Clean Is Our Data? |
+| C | Who is Visiting? | 
 | D | Overloading or Underserved? |
-| E | How Clean Is Our Data? |
+| E | Where Are They Going? |
 | F | What Does a Visit Look Like? |
 | G | The Full Picture: 3-Table JOIN |
 
