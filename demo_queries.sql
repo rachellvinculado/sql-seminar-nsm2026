@@ -48,9 +48,9 @@ GROUP BY sex;
 -- ────────────────────────────────────────────────────────────
 
 -- How many visits did each region receive?
-SELECT d.region, COUNT(*) AS total_visits
+SELECT d.region, COUNT(v.visit_id) AS total_visits
 FROM visits v
-JOIN destinations d ON v.destination_id = d.destination_id
+LEFT JOIN destinations d ON v.destination_id = d.destination_id
 GROUP BY d.region
 ORDER BY total_visits DESC;
 
@@ -66,14 +66,7 @@ ORDER BY visit_count ASC;
 -- SECTION D — Sustainable Tourism: Overloaded or Underserved?
 -- ────────────────────────────────────────────────────────────
 
--- Which destinations receive the most visits?
-SELECT d.destination_name, d.category, COUNT(*) AS visit_count
-FROM visits v
-JOIN destinations d ON v.destination_id = d.destination_id
-GROUP BY d.destination_id
-ORDER BY visit_count DESC;
-
--- Which destination categories attract the most tourists?
+-- Which destination categories get the most visits?
 SELECT d.category, COUNT(*) AS visit_count
 FROM visits v
 JOIN destinations d ON v.destination_id = d.destination_id
@@ -97,22 +90,11 @@ ORDER BY visit_count DESC;
 SELECT * FROM visits
 WHERE spending_php IS NULL;
 
--- How many visits are missing spending per destination?
-SELECT d.destination_name,
-       COUNT(*) AS total_visits,
-       SUM(CASE WHEN v.spending_php IS NULL THEN 1 ELSE 0 END) AS missing_spending
-FROM visits v
-JOIN destinations d ON v.destination_id = d.destination_id
-GROUP BY d.destination_id
-ORDER BY missing_spending DESC;
-
--- Which destinations are missing spending entirely?
-SELECT d.destination_name, COUNT(v.visit_id) AS total_visits,
-       COUNT(v.spending_php) AS visits_with_spending
+-- Which destinations have visits with missing spending?
+SELECT DISTINCT d.destination_name
 FROM destinations d
-LEFT JOIN visits v ON d.destination_id = v.destination_id
-GROUP BY d.destination_id
-HAVING visits_with_spending = 0 OR visits_with_spending IS NULL;
+JOIN visits v ON d.destination_id = v.destination_id
+WHERE v.spending_php IS NULL;
 
 
 -- ────────────────────────────────────────────────────────────
